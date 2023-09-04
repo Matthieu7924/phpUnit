@@ -3,8 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+
 use JetBrains\PhpStorm\Pure;
 use Symfony\Component\Security\Core\User\UserInterface;
+
 
 /**
  * @ORM\Entity
@@ -45,6 +47,8 @@ class User implements UserInterface
      * @ORM\Column
      */
     private string $profileHtmlUrl;
+
+    
 
     #[Pure]
     public function __construct($username, $fullname, $email, $avatarUrl, $profileHtmlUrl)
